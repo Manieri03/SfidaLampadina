@@ -9,23 +9,35 @@ namespace MainLampadina
         {
             Lampadina l = new Lampadina();
 
-            Console.WriteLine("MENU LAMPADINA");
-            Console.WriteLine("Vuoi eseguire un click o sapere lo stato attuale della Lampadina? (click/stato)");
-            string risposta = Console.ReadLine();
 
-            if (risposta == "click")
+            for (int i = 0; i < 500; i++)
             {
-                l.Click();
-                Console.WriteLine("Lo stato della lampadina è stato aggiornato");
+
+                Console.WriteLine(" ________________");
+                Console.WriteLine("\n| MENU LAMPADINA |");
+                Console.WriteLine(" ________________");
+                Console.WriteLine("Vuoi eseguire un click o sapere lo stato attuale della Lampadina? (click/stato)");
+                string risposta = Console.ReadLine();
+
+                if (risposta == "click")
+                {
+                    l.Click();
+                    Console.WriteLine("Lo stato della lampadina è stato aggiornato");
+                    
+                }
+                else if (risposta == "stato")
+                {
+                    Console.WriteLine(l.Descrizione());
+                    
+                }
+                else
+                {
+                    Console.WriteLine("Risposta non valida");
+                    
+                }
             }
-            if (risposta == "stato")
-            {
-                Console.WriteLine(l.Descrizione());
-            }
-            else
-            {
-                Console.WriteLine("Risposta non valida");
-            }
+
+           
         }
     }
 }

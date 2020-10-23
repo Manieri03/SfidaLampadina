@@ -11,9 +11,9 @@ namespace LibreriaLampadina
         public const int STATOSPENTA = 0;
         public const int STATOACCESA = 1;
         public const int STATOROTTA = -1;
-        private const int CLICK_PRIMA_DI_ROTTURA = 30;
+        private const int CLICK_PRIMA_DI_ROTTURA = 5;
 
-        private int stato = STATOROTTA;
+        private int stato = STATOSPENTA;
         private int nClick = 0;
 
         public Lampadina()
@@ -50,7 +50,7 @@ namespace LibreriaLampadina
 
             }
             else
-                return "La lampadina è rotta";
+                return "La lampadina si è rotta!";
 
 
 
